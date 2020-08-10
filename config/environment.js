@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function ( environment ) {
   let ENV = {
     modulePrefix: 'ember-firstapp',
     environment,
@@ -23,7 +23,7 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'development') {
+  if ( environment === 'development' ) {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -31,7 +31,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
-  if (environment === 'test') {
+  if ( environment === 'test' ) {
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -43,9 +43,11 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
   }
 
-  if (environment === 'production') {
+  if ( environment === 'production' ) {
     // here you can enable a production-specific feature
   }
+
+  ENV.MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoic3JhbmF2IiwiYSI6ImNrZG82YXc3NzBoeG0ycHR2dDA0MnJhNTQifQ.VPha3DvbfcvknuwoC_IBhg';
 
   return ENV;
 };
