@@ -3,7 +3,8 @@
     Welcome to super rentals
   </h2>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita perferendis deleniti adipisci
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi expedita
+    perferendis deleniti adipisci
   </p>
   <LinkTo @route="about" class="button">
     About Us
@@ -12,16 +13,18 @@
 
 <div class="rentals">
   <ul class="results">
-    <li>
+    {{!-- <li>
       <Rental @rental={{@model}} />
-    </li>
-    <li>
-      <Rental @rental={{@model}} />
-    </li>
-    <li>
-      <Rental @rental={{@model}} />
-    </li>
-  </ul>
-</div>
+      </li>
+      <li>
+        <Rental @rental={{@model}} />
+        </li> --}}
+        {{#each @model as |rental|}}
+        <li>
+          <Rental @rental={{rental}} />
+          </li>
+          {{/each}}
+        </ul>
+      </div>
 
-{{outlet}}
+      {{outlet}}
