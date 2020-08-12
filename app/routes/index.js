@@ -17,6 +17,7 @@ export default class IndexRoute extends Route {
 
     return data.map( model => {
       let {
+        id,
         attributes
       } = model;
       let type;
@@ -28,6 +29,7 @@ export default class IndexRoute extends Route {
         type = 'Standalone';
       }
       return {
+        id,
         type,
         ...attributes
       };
